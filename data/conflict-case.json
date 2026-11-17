@@ -1,0 +1,14 @@
+{
+  "kind": "source-records",
+  "protocol": "stac-search",
+  "collection": "protocol-sample",
+  "source_url": "https://stac.example.test/search",
+  "assets": [
+    {
+      "path": "conflict-source.bin",
+      "bytes": 544,
+      "sha256": "b1b954bb586bd172264518e349d01ed51fa9523ac9c865d8e1c5343312d983c7"
+    }
+  ],
+  "calls": []
+}

@@ -4,3 +4,5 @@
 
 ## 已接收的协议资料
 现有入口保留 STAC FeatureCollection 的 next 请求、collection/id、datetime 与资产地址。它不证明分页期间搜索全集稳定，也不下载影像字节。
+
+同集合第二次来源接收保存在 data/conflict-case.json。冲突事务必须保持第一份收据和旧投影。
