@@ -1,0 +1,52 @@
+{
+  "protocol": "stac-search",
+  "collection": "sample-008",
+  "records": [
+    {
+      "kind": "query",
+      "id": "query-1",
+      "version": "v1",
+      "refs": [],
+      "payload": {
+        "source": "synthetic",
+        "position": 0
+      }
+    },
+    {
+      "kind": "item",
+      "id": "item-2",
+      "version": "v1",
+      "refs": [
+        "query-1"
+      ],
+      "payload": {
+        "source": "synthetic",
+        "position": 1
+      }
+    },
+    {
+      "kind": "asset",
+      "id": "asset-3",
+      "version": "v1",
+      "refs": [
+        "item-2"
+      ],
+      "payload": {
+        "source": "synthetic",
+        "position": 2
+      }
+    },
+    {
+      "kind": "collection",
+      "id": "collection-4",
+      "version": "v1",
+      "refs": [
+        "asset-3"
+      ],
+      "payload": {
+        "source": "synthetic",
+        "position": 3
+      }
+    }
+  ]
+}
