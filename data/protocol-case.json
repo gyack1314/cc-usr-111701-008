@@ -1,0 +1,14 @@
+{
+  "kind": "source-records",
+  "protocol": "stac-search",
+  "collection": "protocol-sample",
+  "source_url": "https://stac.example.test/search",
+  "assets": [
+    {
+      "path": "protocol-source.bin",
+      "bytes": 536,
+      "sha256": "116b68b14cfa961a704259e5bead9fd74c4ee3e9f7c48fd1ad8a072a30a9a31a"
+    }
+  ],
+  "calls": []
+}

@@ -1,0 +1,27 @@
+{
+  "type": "FeatureCollection",
+  "links": [
+    {
+      "rel": "next",
+      "href": "https://stac.example.test/search?page=2",
+      "method": "GET"
+    }
+  ],
+  "features": [
+    {
+      "type": "Feature",
+      "stac_version": "1.0.0",
+      "id": "scene-42",
+      "collection": "regional",
+      "properties": {
+        "datetime": "2026-11-16T04:00:00Z"
+      },
+      "assets": {
+        "visual": {
+          "href": "https://stac.example.test/assets/scene-42.tif",
+          "type": "image/tiff"
+        }
+      }
+    }
+  ]
+}
