@@ -1,0 +1,159 @@
+{
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "https://stac.example.test/search",
+        "headers": {
+          "Authorization": "Bearer synthetic-token",
+          "X-Stac-Partition": "region-east",
+          "X-Auth": "synthetic-credential"
+        },
+        "body": {
+          "collections": [
+            "regional"
+          ],
+          "datetime": "2026-10-01T00:00:00Z/2026-11-01T00:00:00Z",
+          "bbox": [
+            116.0,
+            39.0,
+            117.5,
+            40.5
+          ],
+          "limit": 2
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "server": "synthetic-stac/2.4"
+        },
+        "body": {
+          "type": "FeatureCollection",
+          "links": [
+            {
+              "rel": "next",
+              "href": "https://stac.example.test/search?cursor=p2",
+              "method": "POST",
+              "body": {
+                "cursor": "p2"
+              },
+              "merge": true
+            }
+          ],
+          "features": [
+            {
+              "type": "Feature",
+              "stac_version": "1.0.0",
+              "id": "scene-01",
+              "collection": "regional",
+              "properties": {
+                "datetime": "2026-10-05T04:00:00Z"
+              },
+              "assets": {
+                "visual": {
+                  "href": "https://stac.example.test/assets/scene-01.tif",
+                  "type": "image/tiff",
+                  "roles": [
+                    "visual"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "Feature",
+              "stac_version": "1.0.0",
+              "id": "scene-02",
+              "collection": "regional",
+              "properties": {
+                "datetime": "2026-10-12T04:00:00Z"
+              },
+              "assets": {
+                "visual": {
+                  "href": "https://stac.example.test/assets/scene-02.tif",
+                  "type": "image/tiff",
+                  "roles": [
+                    "visual"
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "url": "https://stac.example.test/search?cursor=p2",
+        "headers": {
+          "Authorization": "Bearer synthetic-token",
+          "X-Stac-Partition": "region-east",
+          "X-Auth": "synthetic-credential"
+        },
+        "body": {
+          "collections": [
+            "regional"
+          ],
+          "datetime": "2026-10-01T00:00:00Z/2026-11-01T00:00:00Z",
+          "bbox": [
+            116.0,
+            39.0,
+            117.5,
+            40.5
+          ],
+          "limit": 2,
+          "cursor": "p2"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "server": "synthetic-stac/2.4"
+        },
+        "body": {
+          "type": "FeatureCollection",
+          "links": [],
+          "features": [
+            {
+              "type": "Feature",
+              "stac_version": "1.0.0",
+              "id": "scene-02",
+              "collection": "regional",
+              "properties": {
+                "datetime": "2026-10-12T04:00:00Z"
+              },
+              "assets": {
+                "visual": {
+                  "href": "https://stac.example.test/assets/scene-02.tif",
+                  "type": "image/tiff",
+                  "roles": [
+                    "visual"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "Feature",
+              "stac_version": "1.0.0",
+              "id": "scene-03",
+              "collection": "regional",
+              "properties": {
+                "datetime": "2026-10-19T04:00:00Z"
+              },
+              "assets": {
+                "visual": {
+                  "href": "https://stac.example.test/assets/scene-03.tif",
+                  "type": "image/tiff",
+                  "roles": [
+                    "visual"
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

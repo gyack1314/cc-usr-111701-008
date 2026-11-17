@@ -1,0 +1,25 @@
+{
+  "method": "POST",
+  "url": "https://stac.example.test/search",
+  "headers": {
+    "Authorization": "Bearer synthetic-token",
+    "X-Stac-Partition": "region-east",
+    "X-Auth": "synthetic-credential"
+  },
+  "body": {
+    "collections": ["regional"],
+    "datetime": "2026-10-01T00:00:00Z/2026-11-01T00:00:00Z",
+    "bbox": [116.0, 39.0, 117.5, 40.5],
+    "limit": 2
+  },
+  "window": {
+    "collections": ["regional"],
+    "start": "2026-10-01T00:00:00Z",
+    "end": "2026-11-01T00:00:00Z"
+  },
+  "transcript": "transcript-a.json",
+  "overlap_transcript": "transcript-b.json",
+  "overlap_window": "overlap-window.json",
+  "max_pages": 10,
+  "extra_credential_headers": ["x-auth"]
+}
